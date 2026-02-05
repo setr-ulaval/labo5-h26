@@ -187,6 +187,14 @@ Le barême d'évaluation détaillé sera le suivant (laboratoire noté sur 20 po
 * (3 pts) Les statistiques sont affichées correctement dans le terminal, à toutes les 2 secondes, et correspondent aux valeurs attendues
 * (2 pts) L'envoi des caractères sur le bus USB est efficace (utilisation maximisée des paquets)
 
+#### 6.1.3. Évaluation individuelle
+
+Une évaluation individuelle écrite portant sur le laboratoire sera tenue, *en personne*, à la séance d'atelier du 27 mars 2026, à 9h30. La note obtenue à cette évaluation deviendra un facteur multiplicatif appliqué individuellement sur la note d'équipe. Par exemple, une note de 75% à l'évaluation individuelle combinée à une note de 90% pour le code remis résultera en une note de 0.75*0.90 = 67.5%. Une absence non-motivée à cette évaluation entraîne une note (et donc un facteur multiplicatif) de 0.
+
+#### 6.1.4. Questionnaire sur l'utilisation de l'IA
+
+Votre remise _doit_ inclure le fichier `UTILISATION_IA.txt` dûment complété. Les réponses ne sont pas évaluées en tant que telles, mais ne pas remettre ce fichier (ou le remettre dans son état initial, sans modifications et réponses aux questions) entraîne une pénalité automatique de 10% sur la note d'équipe.
+
 ## 7. Ressources et lectures connexes
 
 * [Le dépôt Git contenant les fichiers de base](https://github.com/setr-ulaval/labo5-h26)
