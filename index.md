@@ -43,7 +43,7 @@ L'exécution de `activeUSB` doit être _répétée_ à chaque redémarrage du Ra
 
 ## 5. Énoncé
 
-Une fois ces étapes de configuration complétées, vous pouvez commencer le laboratoire à proprement parler. Le code de base et le squelette de projet (incluant la configuration CMake) sont disponibles sur ce dépôt Git : [https://github.com/setr-ulaval/labo5-h25](https://github.com/setr-ulaval/labo5-h25). L'architecture générale du laboratoire est présentée à la figure suivante :
+Une fois ces étapes de configuration complétées, vous pouvez commencer le laboratoire à proprement parler. Le code de base et le squelette de projet (incluant la configuration CMake) sont disponibles sur ce dépôt Git : [https://github.com/setr-ulaval/labo5-h26](https://github.com/setr-ulaval/labo5-h26). L'architecture générale du laboratoire est présentée à la figure suivante :
 
 <img src="img/architecture.png" style="width:1162px"/>
 
@@ -159,7 +159,7 @@ Comme pour les laboratoires 1 à 3, vous pouvez utiliser le débogage de VScode 
 
 ## 6. Modalités d'évaluation
 
-Ce travail doit être réalisé en **équipe de deux**, la charge de travail étant à répartir équitablement entre les deux membres de l’équipe. Aucun rapport n’est à remettre, mais vous devez soumettre votre code source dans monPortail avant le **10 avril 2025, 17h**. Ensuite, lors de la séance de laboratoire du **11 avril 2025**, les deux équipiers doivent être en mesure individuellement d’expliquer leur approche et de démontrer le bon fonctionnement de l’ensemble de la solution de l’équipe du laboratoire. Si vous ne pouvez pas vous y présenter, contactez l’équipe pédagogique du cours dans les plus brefs délais afin de convenir d’une date d’évaluation alternative. Ce travail compte pour **12%** de la note totale du cours. Comme pour les travaux précédents, votre code doit compiler **sans avertissements** de la part de GCC.
+Ce travail doit être réalisé **en équipe de deux**, la charge de travail étant à répartir équitablement entre les deux membres de l'équipe. Aucun rapport n'est à remettre, mais vous devez soumettre votre code source dans monPortail avant le **25 mars 2026, 23h59**. Ensuite, lors de la séance de laboratoire du **27 mars 2026, 9h30**, les **deux** équipiers doivent être présents pour l'évaluation individuelle de 30 minutes. Si vous ne pouvez pas vous y présenter, contactez l'équipe pédagogique du cours dans les plus brefs délais afin de convenir d'une date d'évaluation alternative. Ce travail compte pour **12%** de la note totale du cours.
 
 Notre évaluation se fera sur le Raspberry Pi de l'enseignant ou de l'assistant et comprendra notamment les éléments suivants:
 
@@ -172,29 +172,24 @@ Notre évaluation se fera sur le Raspberry Pi de l'enseignant ou de l'assistant 
 
 Le barême d'évaluation détaillé sera le suivant (laboratoire noté sur 20 points) :
 
-#### 6.1.1. Qualité du code remis (6 points)
+#### 6.1.1. Qualité du code remis (8 points)
 
-* (3 pts) Le code C est valide, complet et ne contient pas d'erreurs empêchant le bon déroulement des programmes.
+* (4 pts) Le code C est valide, complet et ne contient pas d'erreurs empêchant le bon déroulement des programmes.
 * (1 pts) La compilation se fait sans avertissement (*warning*) de la part du compilateur.
-* (2 pts) La synchronisation entre les différents threads est correctement implémentée et correspond à ce qui est demandé (barrière à l'entrée des threads, mutex pour protéger le tampon circulaire, etc.)
+* (3 pts) La synchronisation entre les différents threads est correctement implémentée et correspond à ce qui est demandé (barrière à l'entrée des threads, mutex pour protéger le tampon circulaire, etc.)
 
-#### 6.1.2. Validité de la solution (9 points)
+#### 6.1.2. Validité de la solution (12 points)
 
 > **Attention** : un programme ne compilant pas obtient automatiquement une note de **zéro** pour cette section.
 
-* (2 pts) Votre programme est en mesure d'envoyer des caractères sur l'ordinateur sur lequel le Raspberry Pi est branché
-* (3 pts) Les caractères affichés sont corrects (pas de coupure, mauvais caractère, ou caractère manquant -- sauf en cas de dépassement de la capacité du tampon circulaire, bien sûr)
-* (2 pts) Les statistiques sont affichées correctement dans le terminal, à toutes les 2 secondes, et correspondent aux valeurs attendues
+* (3 pts) Votre programme est en mesure d'envoyer des caractères sur l'ordinateur sur lequel le Raspberry Pi est branché
+* (4 pts) Les caractères affichés sont corrects (pas de coupure, mauvais caractère, ou caractère manquant -- sauf en cas de dépassement de la capacité du tampon circulaire, bien sûr)
+* (3 pts) Les statistiques sont affichées correctement dans le terminal, à toutes les 2 secondes, et correspondent aux valeurs attendues
 * (2 pts) L'envoi des caractères sur le bus USB est efficace (utilisation maximisée des paquets)
-
-#### 6.1.3. Justesse des explications et réponses aux questions (5 points)
-
-* (5 pts) Les étudiants sont en mesure d'expliquer l'approche utilisée et de répondre aux questions concernant leur code et la théorie liée au laboratoire.
-
 
 ## 7. Ressources et lectures connexes
 
-* [Le dépôt Git contenant les fichiers de base](https://github.com/setr-ulaval/labo5-h25)
+* [Le dépôt Git contenant les fichiers de base](https://github.com/setr-ulaval/labo5-h26)
 * [La table des caractères USB-HID](https://www.win.tue.nl/~aeb/linux/kbd/scancodes-14.html)
 * [La table ASCII](https://www.asciitable.com/)
 * [Un article expliquant comment transformer le Raspberry Pi Zero en clavier, source d'inspiration pour ce laboratoire](https://randomnerdtutorials.com/raspberry-pi-zero-usb-keyboard-hid/)

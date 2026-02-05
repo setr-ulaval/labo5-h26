@@ -1,7 +1,7 @@
 /******************************************************************************
  * Laboratoire 5
  * GIF-3004 Systèmes embarqués temps réel
- * Hiver 2025
+ * Hiver 2026
  * Marc-André Gardner
  * 
  * Fichier implémentant des fonctions utilitaires (déjà codées pour vous)
