@@ -29,7 +29,7 @@ Dans ce laboratoire, nous utiliserons exceptionnellement le _second_ port USB, c
 
 Le Raspberry Pi Zero a ceci de particulier que son port USB peut à la fois servir comme *host* (à savoir qu'on y connecte des périphériques, comme vous l'avez fait avec un clavier au début de la session pour le configurer) ou comme *device* (à savoir qu'il attend les instructions d'un hôte, comme le ferait n'importe quel périphérique USB). Il faut cependant le configurer pour lui indiquer la configuration à adopter (le défaut est *host*). Pour ce faire, suivez les étapes suivantes :
 
-1. Modifiez le fichier `/boot/config.txt` (vous pouvez par exemple utiliser la commande `sudo nano /boot/config.txt`). Juste **après** la ligne `[all]`, ajoutez : `dtoverlay=dwc2` sur une ligne distincte.
+1. Modifiez le fichier `/boot/firmware/config.txt` (vous pouvez par exemple utiliser la commande `sudo nano /boot/firmware/config.txt`). Juste **après** la ligne `[all]`, ajoutez : `dtoverlay=dwc2` sur une ligne distincte.
 2. Modifiez le fichier `/etc/modules`. Après les lignes commençant par `#`, ajoutez `dwc2` sur une ligne distincte, puis `libcomposite` sur une autre ligne (autrement dit, n'écrivez pas `dwc2 libcomposite` sur la même ligne).
 3. Redémarrez votre Raspberry Pi et assurez-vous qu'il est connecté correctement à un autre ordinateur (voir section 3).
 4. Exécutez le fichier `activeUSB` présent dans votre répertoire `/home/pi` de l'image par défaut du cours. Si, pour une raison ou une autre, ce fichier n'est pas présent sur votre Raspberry Pi, vous pouvez le récupérer dans le dépôt Git. Cette exécution requiert les droits d'administrateur (donc `sudo ~/activeUSB`).
