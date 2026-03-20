@@ -30,8 +30,9 @@ pthread_mutex_t mutexTampon;
 // Pour les statistiques
 static unsigned int nombreRequetesRecues, nombreRequetesTraitees, nombreRequetesPerdues;
 
-// Le tempsDebutPeriode permet de se rappeler du debut de la periode ou les statistiques sont mesurees
-// sommeTempsAttente contient la somme de toutes les periodes d'attente pour les requetes
+// On calcule les statistiques par période de N secondes.
+// Le tempsDebutPeriode permet de se rappeler du temps de debut de la periode où les statistiques sont mesurées
+// La variable sommeTempsAttente contient la somme de toutes les periodes d'attente pour les requetes
 // (vous pourrez donc calculer la moyenne du temps d'attente en utilisant les autres variables sur le
 // nombre de requetes).
 static double tempsDebutPeriode, sommeTempsAttente;
