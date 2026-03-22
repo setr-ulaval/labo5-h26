@@ -22,6 +22,31 @@
                 "panel": "shared"
             },
             "problemMatcher": []
+        },
+        {
+            "label": "build-native",
+            "type": "shell",
+            "command": "make -f Makefile.native all",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "presentation": {
+                "reveal": "silent",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "test-native",
+            "type": "shell",
+            "command": "make -f Makefile.native test",
+            "group": "test",
+            "problemMatcher": ["$gcc"],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
         }
     ]
 }

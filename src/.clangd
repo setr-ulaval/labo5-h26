@@ -1,0 +1,9 @@
+CompileFlags:
+  Remove:
+    - -mfpu=*
+    - -mfloat-abi=*
+    - -march=armv6
+    - -mtune=*
+
+Diagnostics:
+  UnusedIncludes: Strict

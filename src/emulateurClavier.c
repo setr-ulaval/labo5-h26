@@ -11,7 +11,11 @@
 
 FILE* initClavier(){
     // Deja implementee pour vous
+#ifdef SIMULATION_MODE
+    FILE* f = fopen("/tmp/hidg0_sim.bin", "wb");
+#else
     FILE* f = fopen(FICHIER_CLAVIER_VIRTUEL, "wb");
+#endif
     setbuf(f, NULL);        // On desactive le buffering pour eviter tout delai
     return f;
 }

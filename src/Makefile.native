@@ -1,0 +1,38 @@
+# Makefile.native - Build natif pour dev/test local
+# NE PAS MODIFIER le CMakeLists.txt du prof, utiliser ce fichier a la place
+
+CC = gcc
+CFLAGS = -std=gnu99 -Wall -Wextra -Wpedantic -Og -g -DSIMULATION_MODE
+LDFLAGS = -lpthread -lm
+
+SRCDIR = .
+BUILDDIR = build-native
+SOURCES = $(SRCDIR)/utils.c $(SRCDIR)/emulateurClavier.c $(SRCDIR)/tamponCirculaire.c $(SRCDIR)/main.c
+OBJECTS = $(patsubst $(SRCDIR)/%.c,$(BUILDDIR)/%.o,$(SOURCES))
+TARGET = $(BUILDDIR)/emulateurClavier
+
+.PHONY: all clean test
+
+all: $(TARGET)
+
+$(BUILDDIR):
+	mkdir -p $(BUILDDIR)
+
+$(BUILDDIR)/%.o: $(SRCDIR)/%.c | $(BUILDDIR)
+	$(CC) $(CFLAGS) -c $< -o $@
+
+$(TARGET): $(OBJECTS)
+	$(CC) $(OBJECTS) $(LDFLAGS) -o $@
+
+# Build + run des tests unitaires
+TEST_SOURCES = $(SRCDIR)/test_tampon.c $(SRCDIR)/tamponCirculaire.c $(SRCDIR)/utils.c
+TEST_TARGET = $(BUILDDIR)/test_tampon
+
+test: $(TEST_TARGET)
+	./$(TEST_TARGET)
+
+$(TEST_TARGET): $(TEST_SOURCES) | $(BUILDDIR)
+	$(CC) $(CFLAGS) $(TEST_SOURCES) $(LDFLAGS) -o $@
+
+clean:
+	rm -rf $(BUILDDIR)

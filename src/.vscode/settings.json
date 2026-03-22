@@ -10,5 +10,8 @@
         "fcntl.h": "c",
         "unistd.h": "c",
         "utils.h": "c"
-    }
+    },
+    "C_Cpp.intelliSenseEngine": "disabled",
+    "clangd.path": "clangd",
+    "clangd.arguments": ["--background-index", "--clang-tidy"]
 }
