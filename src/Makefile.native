@@ -2,7 +2,7 @@
 # NE PAS MODIFIER le CMakeLists.txt du prof, utiliser ce fichier a la place
 
 CC = gcc
-CFLAGS = -std=gnu99 -Wall -Wextra -Wpedantic -Og -g -DSIMULATION_MODE
+CFLAGS = -std=gnu17 -Wall -Wextra -Wpedantic -Wduplicated-cond -Wlogical-op -Wnull-dereference -Wshadow -Og -g -DSIMULATION_MODE
 LDFLAGS = -lpthread -lm
 
 SRCDIR = .
