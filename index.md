@@ -201,5 +201,6 @@ Votre remise _doit_ inclure le fichier `UTILISATION_IA.txt` dûment complété. 
 * [La table des caractères USB-HID](https://www.win.tue.nl/~aeb/linux/kbd/scancodes-14.html)
 * [La table ASCII](https://www.asciitable.com/)
 * [Un article expliquant comment transformer le Raspberry Pi Zero en clavier, source d'inspiration pour ce laboratoire](https://randomnerdtutorials.com/raspberry-pi-zero-usb-keyboard-hid/)
+* [La documentation "Device Class Definition for Human Interface Devices (HID)" de la norme USB (voyez en particulier l'annexe C)](https://www.usb.org/sites/default/files/hid1_11.pdf)
 
 
