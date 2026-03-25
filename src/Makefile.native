@@ -25,14 +25,14 @@ $(TARGET): $(OBJECTS)
 	$(CC) $(OBJECTS) $(LDFLAGS) -o $@
 
 # Build + run des tests unitaires
-TEST_SOURCES = $(SRCDIR)/test_tampon.c $(SRCDIR)/tamponCirculaire.c $(SRCDIR)/utils.c
-TEST_TARGET = $(BUILDDIR)/test_tampon
+TEST_CLAVIER_SOURCES = $(SRCDIR)/test_emulateurClavier.c $(SRCDIR)/emulateurClavier.c $(SRCDIR)/utils.c
+TEST_CLAVIER_TARGET = $(BUILDDIR)/test_emulateurClavier
 
-test: $(TEST_TARGET)
-	./$(TEST_TARGET)
+test: $(TEST_CLAVIER_TARGET)
+	./$(TEST_CLAVIER_TARGET)
 
-$(TEST_TARGET): $(TEST_SOURCES) | $(BUILDDIR)
-	$(CC) $(CFLAGS) $(TEST_SOURCES) $(LDFLAGS) -o $@
+$(TEST_CLAVIER_TARGET): $(TEST_CLAVIER_SOURCES) | $(BUILDDIR)
+	$(CC) $(CFLAGS) $(TEST_CLAVIER_SOURCES) $(LDFLAGS) -o $@
 
 clean:
 	rm -rf $(BUILDDIR)
